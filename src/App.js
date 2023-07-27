@@ -1,15 +1,15 @@
 import './App.css';
-import About from './MyComponents/About';
+// import About from './MyComponents/About';
 import Navbar from "./MyComponents/Navbar";
 import TextForm from "./MyComponents/TextForm"
 import React, { useState } from 'react'
 import Alert from './MyComponents/Alert'
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 
@@ -48,18 +48,22 @@ setTimeout(() => {
 
     }
   }
-  return (  
-    <Router>
+  return ( 
+    <>
+    {/* // <Router> */}
     {/* <Navbar title="TextUtils" aboutText= "About us"  /> */}
   <Navbar title='TextUtils' aboutText= "About us" mode={mode} toggleMode={toggleMode} />
   <Alert alert={alert}/>
     <div className="container my-3">
-    <Routes>
-          <Route path="/about" element={ <About />}></Route>
-          <Route path="/" element={<TextForm showAlert={showAlert} mode={mode} heading="Enter your heading" />}> </Route>
-            </Routes>
+    {/* <Routes> */}
+          {/* <Route path="/about" element={ <About /> }></Route> */}
+         
+          {/* <Route path="/" element={}> </Route> */}
+          <TextForm showAlert={showAlert} mode={mode} heading="Enter your heading" />
+            {/* </Routes> */}
             </div>
-            </Router>  
+            {/* </Router>   */}
+            </>
             );
 }
 
